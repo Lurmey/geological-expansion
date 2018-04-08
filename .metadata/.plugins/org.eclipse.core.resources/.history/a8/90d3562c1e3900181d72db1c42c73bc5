@@ -1,0 +1,34 @@
+package com.gammas.geoex.items;
+
+import com.gammas.geoc.api.ItemLists;
+import com.gammas.geoc.api.RecipeHandler;
+import com.gammas.geoc.api.item.IPanable;
+
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.Optional;
+
+@Optional.Interface(iface = "com.gammas.geoc.api.item.IPanable", modid = "geoc")
+public class ItemPanable extends BaseItem implements IPanable {
+
+	private Item panningResult;
+	private int panningAmount, resultAmount;
+	
+	public ItemPanable(String name, Item panningResult, int panningAmount, int resultAmount) {
+		super(name);
+		
+		this.panningResult = panningResult;
+		this.panningAmount = panningAmount;
+		this.resultAmount = resultAmount;
+		
+		RecipeHandler.panningRecipes.put(new ItemStack(panningResult, 4), )
+		ItemLists.addCrushableItem(this);
+	}
+
+	@Optional.Method(modid = "geoc")
+	@Override
+	public ItemStack getPanningResult() {
+		return new ItemStack(panningResult, panningAmount);
+	}
+
+}

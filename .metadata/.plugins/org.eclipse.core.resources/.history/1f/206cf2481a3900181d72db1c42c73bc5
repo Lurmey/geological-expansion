@@ -1,0 +1,7 @@
+package com.gammas.geoc.api.item;
+
+public interface IPanable {
+	
+	public Item getPanningResult();
+
+}

@@ -1,0 +1,7 @@
+//Items
+item.ruby.name=Ruby
+item.banded_iron_chunk.name=Banded Iron Chunk
+
+//Blocks
+tile.ruby_block.name=Block of Ruby
+tile.banded_iron_formation=Banded Iron Formation

@@ -1,0 +1,8 @@
+//Items
+item.banded_iron_chunk.name=Banded Iron Chunk
+item.banded_iron_dust.name=Banded Iron Dust
+item.crude_iron_dust.name=Crude Iron Dust
+item.wooden_gold_pan.name=Wooden Gold Pan
+
+//Blocks
+tile.banded_iron_formation=Banded Iron Formation

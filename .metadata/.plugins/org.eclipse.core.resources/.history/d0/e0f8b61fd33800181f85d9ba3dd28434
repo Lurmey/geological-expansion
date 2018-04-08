@@ -1,0 +1,5 @@
+package com.gammas.geoex.utils.handlers;
+
+public class RegistryHandler {
+
+}

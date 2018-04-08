@@ -1,0 +1,27 @@
+package com.gammas.geoex.items;
+
+import com.gammas.geoc.api.ItemLists;
+import com.gammas.geoc.api.item.IPanable;
+
+import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.Optional;
+
+@Optional.Interface(iface = "com.gammas.geoc.api.item.IPanable", modid = "geoc")
+public class ItemPanable extends BaseItem implements IPanable {
+
+	private Item panningResult;
+	
+	public ItemPanable(String name, Item panningResult) {
+		super(name);
+		
+		ItemLists.addCrushableItem(this);
+		this.panningResult = panningResult;
+	}
+
+	@Optional.Method(modid = "geoc")
+	@Override
+	public Item getPanningResult() {
+		return panningResult;
+	}
+
+}

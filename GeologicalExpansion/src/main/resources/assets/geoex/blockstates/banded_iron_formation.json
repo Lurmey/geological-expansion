@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "geoex:banded_iron_formation" }
+    }
+}

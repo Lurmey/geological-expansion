@@ -1,0 +1,13 @@
+package com.gammas.geoex.items;
+
+public class ItemWoodenGoldPan extends BaseItem{
+
+	public ItemWoodenGoldPan(String name) {
+		super(name);
+		
+		
+	}
+	
+	
+
+}

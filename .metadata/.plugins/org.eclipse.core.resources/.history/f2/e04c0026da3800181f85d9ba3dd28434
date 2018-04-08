@@ -1,0 +1,8 @@
+package com.gammas.geoc.api.item;
+
+public interface IItemQuality {
+	
+	public int getQualityLevel();
+	public void setQualityLevel(int qualityLevel);
+
+}

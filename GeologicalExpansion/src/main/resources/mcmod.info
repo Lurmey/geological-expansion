@@ -1,0 +1,16 @@
+[
+{
+  "modid": "geoex",
+  "name": "Geological Expansion",
+  "description": "Adding Geology and Refinment to the Geological Mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["GammaS, Lurmey"],
+  "credits": "Hmmm, not sure yet. Thank whomever you'd like!",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

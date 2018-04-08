@@ -1,0 +1,9 @@
+package com.gammas.geoc.api.item;
+
+import net.minecraft.item.ItemStack;
+
+public interface IPanable {
+	
+	public ItemStack getPanningResult();
+
+}

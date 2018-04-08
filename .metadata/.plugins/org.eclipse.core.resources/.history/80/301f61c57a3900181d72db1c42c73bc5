@@ -1,0 +1,33 @@
+package com.gammas.geoex.items;
+
+import com.gammas.geoc.api.RecipeHolder;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumHand;
+import net.minecraft.world.World;
+
+public class ItemWoodenGoldPan extends BaseItem{
+
+	public ItemWoodenGoldPan(String name) {
+		super(name);
+		
+		
+	}
+	
+	@Override
+	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
+		// CHECK AND SEE IF THE PLAYER IS HOLDING A DUST IN THEIR OFF HAND
+		if (RecipeHolder.hasPanningRecipe(input)(playerIn.getHeldItemOffhand()){
+			
+		}
+		
+		// CHECK TO MAKE SURE THE PLAYER IS STANDING NEAR SOME WATER
+		
+		// APPLY THE RECIPE
+	}
+	
+	
+
+}

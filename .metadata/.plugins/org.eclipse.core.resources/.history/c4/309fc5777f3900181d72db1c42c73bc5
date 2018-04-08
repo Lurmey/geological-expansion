@@ -1,0 +1,47 @@
+package com.gammas.geoex.items;
+
+import java.util.List;
+
+import com.gammas.geoc.api.RecipeHolder;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumHand;
+import net.minecraft.world.World;
+
+public class ItemWoodenGoldPan extends BaseItem{
+
+	public ItemWoodenGoldPan(String name) {
+		super(name);
+	}
+	
+	@Override
+	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
+		// CHECK AND SEE IF THE PLAYER IS HOLDING A DUST IN THEIR OFF HAND
+		if (RecipeHolder.hasPanningRecipe(playerIn.getHeldItemOffhand())){
+			ItemStack offHand = playerIn.getHeldItemOffhand();
+			List<ItemStack> recipe = RecipeHolder.getPanningRecipe(offHand);
+			
+			// The player has enough of the dust in their hand
+			if (offHand.getCount() > recipe.get(0).getCount()) {
+				// Is the player in water?
+				if (playerIn.isInWater()) {
+					offHand.shrink(recipe.get(0).getCount());
+					
+					for (int i = 1; i < recipe.size(); i++) {
+						playerIn.addItemStackToInventory(recipe.get(i));
+					}
+					
+					return new ActionResult(EnumActionResult.SUCCESS, playerIn.getHeldItemMainhand());
+				}
+			}
+		}
+		
+		return new ActionResult(EnumActionResult.FAIL, playerIn.getHeldItemMainhand()); 
+	}
+	
+	
+
+}

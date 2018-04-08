@@ -1,0 +1,15 @@
+[02:47:15] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 45311736ms behind, skipping 906234 tick(s)
+[02:47:18] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 3044ms behind, skipping 60 tick(s)
+[02:47:33] [Server thread/INFO]: Saving and pausing game...
+[02:47:33] [Server thread/INFO]: Saving chunks for level 'New World'/overworld
+[02:47:34] [Server thread/INFO]: Saving chunks for level 'New World'/the_nether
+[02:47:34] [Server thread/INFO]: Saving chunks for level 'New World'/the_end
+[02:47:35] [main/INFO]: Stopping!
+[02:47:35] [Server thread/INFO]: Stopping server
+[02:47:35] [Server thread/INFO]: Saving players
+[02:47:35] [Server thread/INFO]: Saving worlds
+[02:47:35] [Server thread/INFO]: Saving chunks for level 'New World'/overworld
+[02:47:35] [Server thread/INFO]: Saving chunks for level 'New World'/the_nether
+[02:47:35] [Server thread/INFO]: Saving chunks for level 'New World'/the_end
+[02:47:35] [main/INFO]: SoundSystem shutting down...
+[02:47:36] [main/WARN]: Author: Paul Lamb, www.paulscode.com

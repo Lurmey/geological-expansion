@@ -1,0 +1,5 @@
+package com.gammas.geoc.api.item;
+
+public interface IItemQuality {
+
+}

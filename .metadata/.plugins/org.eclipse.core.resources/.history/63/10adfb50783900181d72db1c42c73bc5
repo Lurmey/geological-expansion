@@ -1,0 +1,22 @@
+package com.gammas.geoc.api;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import net.minecraft.item.ItemStack;
+
+public class RecipeHandler {
+
+	private static final Map<ItemStack, List<ItemStack>> crushingRecipes = new HashMap<ItemStack, List<ItemStack>>();
+	private static final Map<ItemStack, List<ItemStack>> panningRecipes = new HashMap<ItemStack, List<ItemStack>>();
+	
+	public static List<ItemStack> getCrushingRecipe(ItemStack input) {
+		return crushingRecipes.get(input);
+	}
+	
+	public static List<ItemStack> getPanningRecipe(ItemStack input) {
+		return crushingRecipes.get(input);
+	}
+
+}

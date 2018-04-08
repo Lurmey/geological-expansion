@@ -1,0 +1,7 @@
+package com.gammas.geoex.items;
+
+import com.gammas.geoc.api.item.ICrushable;
+
+public class ItemCrushable extends BaseItem implements ICrushable{
+
+}

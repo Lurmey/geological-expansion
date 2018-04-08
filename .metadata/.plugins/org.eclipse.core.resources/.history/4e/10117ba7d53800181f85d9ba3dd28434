@@ -1,0 +1,17 @@
+package com.gammas.geoex.items;
+
+import com.gammas.geoex.utils.IHasModel;
+
+import net.minecraft.item.Item;
+
+public class BaseItem extends Item implements IHasModel{
+
+	
+	@Override
+	public void registerModels() {
+		
+	}
+	
+	
+	
+}

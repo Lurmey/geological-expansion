@@ -1,0 +1,56 @@
+package com.gammas.geoc.api;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import net.minecraft.item.ItemStack;
+import scala.actors.threadpool.Arrays;
+
+public class RecipeHolder {
+
+	private static final Map<ItemStack, List<ItemStack>> crushingRecipes = new HashMap<ItemStack, List<ItemStack>>();
+	private static final Map<ItemStack, List<ItemStack>> panningRecipes = new HashMap<ItemStack, List<ItemStack>>();
+	
+	public static List<ItemStack> getCrushingRecipe(ItemStack input) {
+		return crushingRecipes.get(input);
+	}
+	
+	public static List<ItemStack> getPanningRecipe(ItemStack input) {
+		List<ItemStack> recipe = new ArrayList<ItemStack>();
+		
+		for (ItemStack itemStack : panningRecipes.keySet()) {
+			if (input.isItemEqual(itemStack)) {
+				recipe.add(itemStack);
+				recipe.addAll(panningRecipes.get(itemStack));
+				return recipe;
+			}
+		}
+	}
+	
+	public static void addCrushingRecipe(ItemStack input, ItemStack... outputs) {
+		if (!crushingRecipes.containsKey(input))
+			crushingRecipes.put(null, Arrays.asList(outputs));
+	}
+	
+	public static void addPanningRecipe(ItemStack input, ItemStack... outputs) {
+		if (!panningRecipes.containsKey(input))
+			panningRecipes.put(null, Arrays.asList(outputs));
+	}
+	
+	public static boolean hasCrushingRecipe(ItemStack input) {
+		return crushingRecipes.containsKey(input);
+	}
+	
+	public static boolean hasPanningRecipe(ItemStack input) {
+		for (ItemStack itemStack : panningRecipes.keySet()) {
+			if (input.isItemEqual(itemStack)) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+
+}

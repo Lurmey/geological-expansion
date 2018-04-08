@@ -1,0 +1,9 @@
+package com.gammas.geoex.items;
+
+import net.minecraft.item.Item;
+
+public class BaseItem extends Item {
+	
+	
+	
+}
