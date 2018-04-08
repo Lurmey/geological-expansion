@@ -1,0 +1,6 @@
+package com.gammas.geoex.utils;
+
+public class MaterialProperties {
+	
+	public static final float BANDED_IRON_HARDNESS = 5.75f;
+}

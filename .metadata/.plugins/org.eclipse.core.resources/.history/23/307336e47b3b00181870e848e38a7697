@@ -1,0 +1,22 @@
+package com.gammas.geoex.items;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumHand;
+import net.minecraft.world.World;
+
+public class ItemClayMortarPestle extends BaseItem{
+
+	public ItemClayMortarPestle(String name) {
+		super(name);
+		this.setMaxStackSize(1);
+		this.setMaxDamage(32);
+	}
+	
+	@Override
+	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
+		ItemStack itemstack = playerIn.getHeldItemMainhand();
+	}
+
+}
