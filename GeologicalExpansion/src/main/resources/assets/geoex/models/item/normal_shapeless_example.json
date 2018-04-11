@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "geoex:recipes",
+  "ingredients": [
+    {
+      "item": "geoex:separated_banded_iron"
+    },
+    {
+      "item": "geoex:crushed_limestone"
+    },
+    {
+      "item": "geoex:crushed_charcoal"
+    }
+  ],
+  "result": {
+    "item": "geoex:powder_crude_iron"
+  }
+}

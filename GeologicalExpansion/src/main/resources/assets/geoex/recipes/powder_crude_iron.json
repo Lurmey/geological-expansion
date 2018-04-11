@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "geoex:recipes",
+  "ingredients": [
+    {
+      "item": "geoex:separated_banded_iron"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "crushedCarbon"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "crushedCalcium"
+    }
+  ],
+  "result": {
+    "item": "geoex:powder_crude_iron"
+  }
+}

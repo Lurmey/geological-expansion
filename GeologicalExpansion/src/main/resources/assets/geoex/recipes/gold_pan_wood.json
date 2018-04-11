@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "minecraft:slime",
+  "pattern": [
+    "# #",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "geoex:gold_pan_wood"
+  }
+}

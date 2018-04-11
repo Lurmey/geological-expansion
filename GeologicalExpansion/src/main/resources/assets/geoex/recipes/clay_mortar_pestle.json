@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "minecraft:slime",
+  "pattern": [
+    "# #",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:clay_ball"
+    }
+  },
+  "result": {
+    "item": "geoex:mortar_pestle_clay"
+  }
+}

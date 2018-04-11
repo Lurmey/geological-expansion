@@ -1,7 +1,0 @@
-package com.gammas.geoex.items;
-
-public class ItemWoodenGoldPan extends BaseIten{
-	
-	
-
-}

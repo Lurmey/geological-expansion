@@ -1,7 +1,0 @@
-package com.gammas.geoex.blocks;
-
-import net.minecraft.block.Block;
-
-public class BaseBlock extends Block {
-
-}

@@ -16,11 +16,11 @@ public class RecipeHandler {
 	
 	public static void addRecipes() {
 		
-		RecipeHolder.addCrushingRecipe(new ItemStack(ItemInit.BANDED_IRON_CHUNK, 1), new ItemStack(ItemInit.BANDED_IRON_CRUSHED, 1));
-		RecipeHolder.addCrushingRecipe(new ItemStack(ItemInit.LIMESTONE_CHUNK, 1), new ItemStack(ItemInit.LIMESTONE_CRUSHED, 1));
-		RecipeHolder.addCrushingRecipe(new ItemStack(Items.COAL, 1, 1), new ItemStack(ItemInit.CHARCOAL_CRUSHED));
+		RecipeHolder.addCrushingRecipe(new ItemStack(ItemInit.CHUNK_BANDED_IRON, 1), new ItemStack(ItemInit.CRUSHED_BANDED_IRON, 1));
+		RecipeHolder.addCrushingRecipe(new ItemStack(ItemInit.CHUNK_LIMESTONE, 1), new ItemStack(ItemInit.CRUSHED_LIMESTONE, 1));
+		RecipeHolder.addCrushingRecipe(new ItemStack(Items.COAL, 1, 1), new ItemStack(ItemInit.CRUSHED_CHARCOAL));
 		
-		RecipeHolder.addPanningRecipe(new ItemStack(ItemInit.BANDED_IRON_CRUSHED, 4), new ItemStack(ItemInit.BANDED_IRON_SEPERATED, 2));
+		RecipeHolder.addPanningRecipe(new ItemStack(ItemInit.CRUSHED_BANDED_IRON, 4), new ItemStack(ItemInit.SEPARATED_BANDED_IRON, 2));
 		
 	}
 

@@ -1,9 +1,0 @@
-package com.gammas.geoc.utils;
-
-public class References {
-
-	public static final String MOD_ID = "geoc";
-	public static final String NAME = "Geological Core";
-	
-	
-}

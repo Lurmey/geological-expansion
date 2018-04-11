@@ -15,20 +15,20 @@ public class ItemInit {
 	public static final List<Item> ITEMS = new ArrayList<Item>();
 	
 	// Items
-	public static final Item BANDED_IRON_CHUNK = new BaseItem("banded_iron_chunk").setHardness(MaterialProperties.BANDED_IRON_HARDNESS);
-	public static final Item BANDED_IRON_CRUSHED = new BaseItem("banded_iron_crushed");
-	public static final Item BANDED_IRON_SEPERATED = new BaseItem("banded_iron_seperated");
+	public static final Item CHUNK_BANDED_IRON = new BaseItem("chunk_banded_iron").setHardness(MaterialProperties.BANDED_IRON_HARDNESS);
+	public static final Item CRUSHED_BANDED_IRON = new BaseItem("crushed_banded_iron");
+	public static final Item SEPARATED_BANDED_IRON = new BaseItem("separated_banded_iron");
 	
-	public static final Item LIMESTONE_CHUNK = new BaseItem("limestone_chunk").setHardness(MaterialProperties.LIMESTONE_HARDNESS);
-	public static final Item LIMESTONE_CRUSHED = new BaseItem("limestone_crushed");
+	public static final Item CHUNK_LIMESTONE = new BaseItem("chunk_limestone").setHardness(MaterialProperties.LIMESTONE_HARDNESS);
+	public static final Item CRUSHED_LIMESTONE = new BaseItem("crushed_limestone");
 	
-	public static final Item CHARCOAL_CRUSHED = new BaseItem("charcoal_crushed");
+	public static final Item CRUSHED_CHARCOAL = new BaseItem("crushed_charcoal");
 	
-	public static final Item CRUDE_IRON_POWDER = new BaseItem("crude_iron_powder");
+	public static final Item POWDER_CRUDE_IRON = new BaseItem("powder_crude_iron");
 	
-	public static final Item CLAY_MORTAR_PESTLE = new BaseItem("clay_mortar_pestle");
+	public static final Item MORTAR_PESTLE_CLAY = new BaseItem("mortar_pestle_clay").setMaxStackSize(1);
 
 	// Tools
-	public static final Item WOODEN_GOLD_PAN = new ItemWoodenGoldPan("wooden_gold_pan");
-	public static final Item FIRED_CLAY_MORTAR_PESTLE = new ItemMortarPestle("fired_clay_mortar_pestle", 32).setHardness(MaterialProperties.FIRED_CLAY_HARDNESS);
+	public static final Item GOLD_PAN_WOOD = new ItemWoodenGoldPan("gold_pan_wood");
+	public static final Item MORTAR_PESTLE_FIRED_CLAY = new ItemMortarPestle("mortar_pestle_fied_clay", 32).setHardness(MaterialProperties.FIRED_CLAY_HARDNESS);
 }
