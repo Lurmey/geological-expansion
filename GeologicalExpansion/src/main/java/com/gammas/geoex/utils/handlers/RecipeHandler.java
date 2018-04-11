@@ -3,6 +3,7 @@ package com.gammas.geoex.utils.handlers;
 import com.gammas.geoc.api.RecipeHolder;
 import com.gammas.geoex.init.ItemInit;
 
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
 public class RecipeHandler {
@@ -15,9 +16,11 @@ public class RecipeHandler {
 	
 	public static void addRecipes() {
 		
-		RecipeHolder.addCrushingRecipe(new ItemStack(ItemInit.BANDED_IRON_CHUNK, 1), new ItemStack(ItemInit.BANDED_IRON_DUST, 1));
+		RecipeHolder.addCrushingRecipe(new ItemStack(ItemInit.CHUNK_BANDED_IRON, 1), new ItemStack(ItemInit.CRUSHED_BANDED_IRON, 1));
+		RecipeHolder.addCrushingRecipe(new ItemStack(ItemInit.CHUNK_LIMESTONE, 1), new ItemStack(ItemInit.CRUSHED_LIMESTONE, 1));
+		RecipeHolder.addCrushingRecipe(new ItemStack(Items.COAL, 1, 1), new ItemStack(ItemInit.CRUSHED_CHARCOAL));
 		
-		RecipeHolder.addPanningRecipe(new ItemStack(ItemInit.BANDED_IRON_DUST, 4), new ItemStack(ItemInit.CRUDE_IRON_DUST, 2));
+		RecipeHolder.addPanningRecipe(new ItemStack(ItemInit.CRUSHED_BANDED_IRON, 4), new ItemStack(ItemInit.SEPARATED_BANDED_IRON, 2));
 		
 	}
 

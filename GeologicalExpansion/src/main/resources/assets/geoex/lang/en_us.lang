@@ -1,8 +1,14 @@
 //Items
-item.banded_iron_chunk.name=Banded Iron Chunk
-item.banded_iron_dust.name=Banded Iron Dust
-item.crude_iron_dust.name=Crude Iron Dust
-item.wooden_gold_pan.name=Wooden Gold Pan
+item.chunk_banded_iron.name=Banded Iron Chunk
+item.crushed_banded_iron.name=Crushed Banded Iron
+item.separated_banded_iron.name=Separated Banded Iron
+item.chunk_limestone.name=Limestone Chunk
+item.crushed_limestone.name=Crushed Limestone
+item.crushed_charcoal.name=Crushed Charcoal
+item.powder_crude_iron.name=Crude Iron Powder
+item.mortar_pestle_clay.name=Clay Mortar and Pestle
+item.mortar_pestle_fied_clay.name=Fired Clay Mortar and Pestle
+item.gold_pan_wood.name=Wooden Gold Pan
 
 //Blocks
 tile.banded_iron_formation=Banded Iron Formation

@@ -1,0 +1,21 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "crushedIron"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "crushedCarbon"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "crushedCalcium"
+    }
+  ],
+  "result": {
+    "item": "geoex:powder_crude_iron",
+    "count": 2
+  }
+}

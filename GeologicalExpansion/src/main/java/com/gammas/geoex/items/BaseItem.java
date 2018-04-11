@@ -1,5 +1,6 @@
 package com.gammas.geoex.items;
 
+import com.gammas.geoc.api.item.IItemProperties;
 import com.gammas.geoex.Main;
 import com.gammas.geoex.init.ItemInit;
 import com.gammas.geoex.utils.IHasModel;
@@ -7,8 +8,10 @@ import com.gammas.geoex.utils.IHasModel;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class BaseItem extends Item implements IHasModel{
+public class BaseItem extends Item implements IHasModel, IItemProperties{
 
+	float hardness, quality;
+	
 	public BaseItem(String name) {
 		setUnlocalizedName(name);
 		setRegistryName(name);
@@ -20,6 +23,28 @@ public class BaseItem extends Item implements IHasModel{
 	@Override
 	public void registerModels() {
 		Main.proxy.registerItemRenderer(this, 0, "inventory");
+	}
+
+	@Override
+	public float getQualityLevel() {
+		return 0;
+	}
+
+	@Override
+	public void setQualityLevel(float qualityLevel) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public float getHardness() {
+		return hardness;
+	}
+
+	@Override
+	public Item setHardness(float hardness) {
+		this.hardness = hardness;
+		return this;
 	}
 	
 	

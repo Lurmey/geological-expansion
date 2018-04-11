@@ -14,7 +14,22 @@ public class RecipeHolder {
 	private static final Map<ItemStack, List<ItemStack>> panningRecipes = new HashMap<ItemStack, List<ItemStack>>();
 	
 	public static List<ItemStack> getCrushingRecipe(ItemStack input) {
-		return crushingRecipes.get(input);
+		List<ItemStack> recipe = new ArrayList<ItemStack>();
+		
+		System.out.println("Recipe count: " + crushingRecipes.size());
+		
+		for (ItemStack itemStack : crushingRecipes.keySet()) {
+			if (input.isItemEqual(itemStack)) {
+				recipe.add(itemStack);
+				recipe.addAll(crushingRecipes.get(itemStack));
+				return recipe;
+			}
+		}
+		
+		System.out.println("Recipe Not Found!");
+		
+		recipe.add(ItemStack.EMPTY);
+		return recipe;
 	}
 	
 	public static List<ItemStack> getPanningRecipe(ItemStack input) {
@@ -44,12 +59,16 @@ public class RecipeHolder {
 	public static void addPanningRecipe(ItemStack input, ItemStack... outputs) {
 		if (!panningRecipes.containsKey(input))
 			panningRecipes.put(input, Arrays.asList(outputs));
-		
-		System.out.println("RECIPE ADDED!");
 	}
 	
 	public static boolean hasCrushingRecipe(ItemStack input) {
-		return crushingRecipes.containsKey(input);
+		for (ItemStack itemStack : crushingRecipes.keySet()) {
+			if (input.isItemEqual(itemStack)) {
+				return true;
+			}
+		}
+		
+		return false;
 	}
 	
 	public static boolean hasPanningRecipe(ItemStack input) {
