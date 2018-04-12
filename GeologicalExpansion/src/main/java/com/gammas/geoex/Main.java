@@ -8,7 +8,7 @@ import com.gammas.geoex.utils.handlers.OreDictionaryHandler;
 import com.gammas.geoex.utils.handlers.RecipeHandler;
 import com.gammas.geoex.utils.handlers.RegistryHandler;
 
-import net.minecraft.init.Blocks;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;

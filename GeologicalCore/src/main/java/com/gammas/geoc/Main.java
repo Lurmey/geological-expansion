@@ -11,15 +11,20 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = References.MOD_ID, name = References.NAME, version = References.VERSION)
-public class Main {
-	public static Logger logger;
+public class Main
+{
+    public static Logger logger;
 
-	@EventHandler
-	public void preInit(FMLPreInitializationEvent event) {
-		logger = event.getModLog();
-	}
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event)
+    {
+        logger = event.getModLog();
+    }
 
-	@EventHandler
-	public void init(FMLInitializationEvent event) {
-	}
+    @EventHandler
+    public void init(FMLInitializationEvent event)
+    {
+        // some example code
+        logger.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+    }
 }

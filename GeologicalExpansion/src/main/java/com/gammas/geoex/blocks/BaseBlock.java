@@ -20,6 +20,7 @@ public class BaseBlock extends Block implements IHasModel{
 	int minDropAmount, maxDropAmount;
 	boolean isTransparent;
 
+	// We have different constructors based on what you need the block to do.
 	public BaseBlock(String name, Material material) {
 		this(name, material, null, 1, 1, false);
 	}
