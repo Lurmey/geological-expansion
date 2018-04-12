@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.gammas.geoex.items.BaseItem;
+import com.gammas.geoex.items.ItemMaterial;
 import com.gammas.geoex.items.ItemMortarPestle;
 import com.gammas.geoex.items.ItemWoodenGoldPan;
 import com.gammas.geoex.utils.MaterialProperties;
@@ -18,6 +19,8 @@ public class ItemInit {
 	public static final Item CHUNK_BANDED_IRON = new BaseItem("chunk_banded_iron").setHardness(MaterialProperties.BANDED_IRON_HARDNESS);
 	public static final Item CRUSHED_BANDED_IRON = new BaseItem("crushed_banded_iron");
 	public static final Item SEPARATED_BANDED_IRON = new BaseItem("separated_banded_iron");
+	
+	public static final Item TEST_MATERIAL = new ItemMaterial("test_material");
 	
 	public static final Item CHUNK_LIMESTONE = new BaseItem("chunk_limestone").setHardness(MaterialProperties.LIMESTONE_HARDNESS);
 	public static final Item CRUSHED_LIMESTONE = new BaseItem("crushed_limestone");
