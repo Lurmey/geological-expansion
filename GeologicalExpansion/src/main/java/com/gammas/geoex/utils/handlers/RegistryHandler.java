@@ -1,12 +1,10 @@
 package com.gammas.geoex.utils.handlers;
 
-import com.gammas.geoc.utils.References;
 import com.gammas.geoex.init.BlockInit;
 import com.gammas.geoex.init.ItemInit;
 import com.gammas.geoex.utils.IHasModel;
 
 import net.minecraft.block.Block;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Biomes;
 import net.minecraft.init.Blocks;
@@ -14,11 +12,9 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.world.ChunkEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -44,16 +40,17 @@ public class RegistryHandler {
 		for (Item item : ItemInit.ITEMS) {
 			if (item instanceof IHasModel) {
 				if (!item.getHasSubtypes()) {
-					((IHasModel)item).registerModels(0, "", "inventory");
+					((IHasModel) item).registerModels(0, "", "inventory");
 				} else {
 					NonNullList<ItemStack> subItems = NonNullList.create();
 					item.getSubItems(CreativeTabs.SEARCH, subItems);
-	
+
 					for (int i = 0; i < subItems.size(); i++) {
-						subItems.get(i).getItem().setUnlocalizedName(subItems.get(i).getItem().getUnlocalizedName() + "_" + i);
-						((IHasModel)subItems.get(i).getItem()).registerModels(i, "", "test=" + i);
+						System.out.println("material=" + ((IHasModel) subItems.get(i).getItem()).getName(i));
+						((IHasModel) subItems.get(i).getItem()).registerModels(i, "",
+								"material=" + ((IHasModel) subItems.get(i).getItem()).getName(i));
 					}
-	
+
 				}
 			}
 		}

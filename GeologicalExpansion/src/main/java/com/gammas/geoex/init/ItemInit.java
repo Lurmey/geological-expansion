@@ -20,7 +20,7 @@ public class ItemInit {
 	public static final Item CRUSHED_BANDED_IRON = new BaseItem("crushed_banded_iron");
 	public static final Item SEPARATED_BANDED_IRON = new BaseItem("separated_banded_iron");
 	
-	public static final Item TEST_MATERIAL = new ItemMaterial("test_material");
+	public static final Item MATERIALS = new ItemMaterial("materials");
 	
 	public static final Item CHUNK_LIMESTONE = new BaseItem("chunk_limestone").setHardness(MaterialProperties.LIMESTONE_HARDNESS);
 	public static final Item CRUSHED_LIMESTONE = new BaseItem("crushed_limestone");

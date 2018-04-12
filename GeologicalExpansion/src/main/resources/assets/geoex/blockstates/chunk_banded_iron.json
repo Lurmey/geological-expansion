@@ -1,0 +1,12 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "builtin/generated"
+    },
+    "variants": {
+        "test": {
+            "1":     {"textures": {"layer0": "dimensionshiftmain:items/glass_bottle_chaos_essence"} },
+            "2":     {"textures": {"layer0": "dimensionshiftmain:items/chaos_essence_drop"} }
+        }
+    }
+}

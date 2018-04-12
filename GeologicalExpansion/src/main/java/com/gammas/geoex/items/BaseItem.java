@@ -46,6 +46,11 @@ public class BaseItem extends Item implements IHasModel, IItemProperties{
 		this.hardness = hardness;
 		return this;
 	}
+
+	@Override
+	public String getName(int meta) {
+		return getUnlocalizedName();
+	}
 	
 	
 	

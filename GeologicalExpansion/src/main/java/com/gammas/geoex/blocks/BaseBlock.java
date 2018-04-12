@@ -74,5 +74,10 @@ public class BaseBlock extends Block implements IHasModel{
 	public void registerModels(int meta, String variantName, String id) {
 		Main.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "", "inventory");
 	}
+
+	@Override
+	public String getName(int meta) {
+		return getUnlocalizedName();
+	}
 	
 }
