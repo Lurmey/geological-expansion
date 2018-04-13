@@ -2,6 +2,7 @@ package com.gammas.geoex;
 
 import org.apache.logging.log4j.Logger;
 
+import com.gammas.geoex.init.ItemInit;
 import com.gammas.geoex.proxy.CommonProxy;
 import com.gammas.geoex.utils.References;
 import com.gammas.geoex.utils.handlers.OreDictionaryHandler;
@@ -34,6 +35,7 @@ public class Main {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		OreDictionaryHandler.register();
+		ItemInit.MATERIALS.registerOreDictEntries();
 		RecipeHandler.addRecipes();
 		RegistryHandler.otherRegistries();
 	}

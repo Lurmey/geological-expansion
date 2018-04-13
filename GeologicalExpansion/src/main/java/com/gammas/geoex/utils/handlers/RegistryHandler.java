@@ -2,6 +2,7 @@ package com.gammas.geoex.utils.handlers;
 
 import com.gammas.geoex.init.BlockInit;
 import com.gammas.geoex.init.ItemInit;
+import com.gammas.geoex.items.ItemMultiple;
 import com.gammas.geoex.utils.IHasModel;
 
 import net.minecraft.block.Block;
@@ -46,9 +47,10 @@ public class RegistryHandler {
 					item.getSubItems(CreativeTabs.SEARCH, subItems);
 
 					for (int i = 0; i < subItems.size(); i++) {
-						System.out.println("material=" + ((IHasModel) subItems.get(i).getItem()).getName(i));
-						((IHasModel) subItems.get(i).getItem()).registerModels(i, "",
-								"material=" + ((IHasModel) subItems.get(i).getItem()).getName(i));
+						if (subItems.get(i).getItem() instanceof ItemMultiple) {
+							ItemMultiple subItem = (ItemMultiple) subItems.get(i).getItem();
+							subItem.registerModels(i, "", "material=" + subItem.getName(i));
+						}
 					}
 
 				}
@@ -62,7 +64,7 @@ public class RegistryHandler {
 		}
 	}
 
-	public static Block fromBlock = Blocks.DIRT; // change this to suit y
+	public static Block fromBlock = Blocks.DIRT;
 	public static Block toBlock = BlockInit.BANDED_IRON_FORMATION;
 
 	@SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)

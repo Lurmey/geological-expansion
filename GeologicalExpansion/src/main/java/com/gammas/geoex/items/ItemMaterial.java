@@ -1,41 +1,29 @@
 package com.gammas.geoex.items;
 
-import com.gammas.geoex.utils.handlers.EnumHandler.Materials;
+import com.gammas.geoex.utils.MaterialProperties;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
-import net.minecraftforge.oredict.OreDictionary;
 
-public class ItemMaterial extends BaseItem {
+public class ItemMaterial extends ItemMultiple{
 
+	// ITEMS
+	public static ItemStack CHUNK_BANDED_IRON;
+	public static ItemStack POWDER_BANDED_IRON;
+	public static ItemStack SEPARATED_BANDED_IRON;
+	
+	
 	public ItemMaterial(String name) {
 		super(name);
-
-		setHasSubtypes(true);
+		
+		initItems();
 	}
-
-	@Override
-	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> items) {
-		for (int i = 0; i < Materials.values().length; i++) {
-			items.add(new ItemStack(this, 1, i));
-			if (Materials.values()[i].getOreDictionaryEntry() != "null")
-				OreDictionary.registerOre(Materials.values()[i].getOreDictionaryEntry(), new ItemStack(this, 1, i));
-		}
+	
+	private void initItems() {
+		CHUNK_BANDED_IRON = addOreDictItem(0, "chunk_bandedIron", "chunkBandedIron", MaterialProperties.BANDED_IRON_HARDNESS);
+		POWDER_BANDED_IRON = addOreDictItem(1, "powder_bandedIron", "powderBandedIron");
+		SEPARATED_BANDED_IRON = addOreDictItem(2, "separated_bandedIron", "dustCrudeIronOre");
 	}
+	
+	
 
-	@Override
-	public String getUnlocalizedName(ItemStack stack) {
-		for (int i = 0; i < Materials.values().length; i++) {
-			if (stack.getMetadata() == i) {
-				return getUnlocalizedName() + "." + Materials.values()[i].getName();
-			}
-		}
-		return "invalid.item";
-	}
-
-	@Override
-	public String getName(int meta) {
-		return Materials.values()[meta].getName();
-	}
 }

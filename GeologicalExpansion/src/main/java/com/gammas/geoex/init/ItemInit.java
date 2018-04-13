@@ -16,11 +16,7 @@ public class ItemInit {
 	public static final List<Item> ITEMS = new ArrayList<Item>();
 	
 	// Items
-	public static final Item CHUNK_BANDED_IRON = new BaseItem("chunk_banded_iron").setHardness(MaterialProperties.BANDED_IRON_HARDNESS);
-	public static final Item CRUSHED_BANDED_IRON = new BaseItem("crushed_banded_iron");
-	public static final Item SEPARATED_BANDED_IRON = new BaseItem("separated_banded_iron");
-	
-	public static final Item MATERIALS = new ItemMaterial("materials");
+	public static final ItemMaterial MATERIALS = new ItemMaterial("materials");
 	
 	public static final Item CHUNK_LIMESTONE = new BaseItem("chunk_limestone").setHardness(MaterialProperties.LIMESTONE_HARDNESS);
 	public static final Item CRUSHED_LIMESTONE = new BaseItem("crushed_limestone");

@@ -16,7 +16,7 @@ public class RecipeHandler {
 	
 	public static void addRecipes() {
 		
-		RecipeHolder.addCrushingRecipe(new ItemStack(ItemInit.MATERIALS, 1, 0), new ItemStack(ItemInit.CRUSHED_BANDED_IRON, 1));
+		RecipeHolder.addCrushingRecipe(ItemInit.MATERIALS.CHUNK_BANDED_IRON, ItemInit.MATERIALS.POWDER_BANDED_IRON);
 		RecipeHolder.addCrushingRecipe(new ItemStack(ItemInit.CHUNK_LIMESTONE, 1), new ItemStack(ItemInit.CRUSHED_LIMESTONE, 1));
 		RecipeHolder.addCrushingRecipe(new ItemStack(Items.COAL, 1, 1), new ItemStack(ItemInit.CRUSHED_CHARCOAL));
 		

@@ -13,10 +13,11 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
 
 public class BaseBlock extends Block implements IHasModel{
 
-	Item dropItem;
+	ItemStack dropItem;
 	int minDropAmount, maxDropAmount;
 	boolean isTransparent;
 
@@ -29,15 +30,15 @@ public class BaseBlock extends Block implements IHasModel{
 		this(name, material, null, 1, 1, isTransparent);
 	}
 
-	public BaseBlock(String name, Material material, Item dropItem){
+	public BaseBlock(String name, Material material, ItemStack dropItem){
 		this(name, material, dropItem, 1, 1, false);
 	}
 
-	public BaseBlock(String name, Material material, Item dropItem, int dropAmount){
+	public BaseBlock(String name, Material material, ItemStack dropItem, int dropAmount){
 		this(name, material, dropItem, dropAmount, dropAmount, false);
 	}
 
-	public BaseBlock(String name, Material material, Item dropItem, int minDropAmount, int maxDropAmount, boolean isTransparent){
+	public BaseBlock(String name, Material material, ItemStack dropItem, int minDropAmount, int maxDropAmount, boolean isTransparent){
 		super(material);
 
 		setUnlocalizedName(name);
@@ -57,7 +58,12 @@ public class BaseBlock extends Block implements IHasModel{
 
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-		return (dropItem == null) ? Item.getItemFromBlock(this) : dropItem;
+		return (dropItem == null) ? Item.getItemFromBlock(this) : dropItem.getItem();
+	}
+	
+	@Override
+	public int damageDropped(IBlockState state) {
+		return dropItem.getMetadata();
 	}
 
 	@Override
